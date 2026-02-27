@@ -1,1 +1,30 @@
+enable
+configure terminal
+hostname R1
+no ip domain-lookup
 
+! LAN Interface 1
+interface gigabitEthernet0/0
+ip address 154.3.100.33 255.255.255.224
+no shutdown
+exit
+
+! LAN Interface 2
+interface gigabitEthernet0/1
+ip address 154.3.100.65 255.255.255.224
+no shutdown
+exit
+
+! WAN Interface to R2
+interface serial0/0/0
+ip address 154.3.100.129 255.255.255.224
+clock rate 128000
+no shutdown
+exit
+
+! Static Routes
+ip route 154.3.100.0 255.255.255.224 154.3.100.158
+ip route 154.3.100.96 255.255.255.224 154.3.100.158
+
+end
+copy running-config startup-config
