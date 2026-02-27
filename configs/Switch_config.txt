@@ -1,0 +1,15 @@
+enable
+configure terminal
+hostname SW1
+
+! Configure Access Port
+interface fastEthernet0/1
+switchport mode access
+switchport port-security
+switchport port-security maximum 1
+switchport port-security mac-address sticky
+no shutdown
+exit
+
+end
+copy running-config startup-config
