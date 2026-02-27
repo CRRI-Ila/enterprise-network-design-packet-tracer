@@ -43,6 +43,10 @@ The design enables full inter-subnet communication using static routing.
 ### 1. Subnetting (FLSM)
 
 - Calculated subnet ranges and masks
+
+<img width="721" height="846" alt="image" src="https://github.com/user-attachments/assets/f12811b0-b781-4d1a-965c-011c9da40d58" />
+
+  
 - Assigned IP addresses systematically
 - Ensured consistent subnet sizes across all networks
 
