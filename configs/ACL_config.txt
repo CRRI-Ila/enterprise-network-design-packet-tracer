@@ -1,0 +1,11 @@
+configure terminal
+
+access-list 1 permit 154.3.100.30 0.0.0.0
+access-list 1 permit 154.3.100.62 0.0.0.0
+access-list 1 permit 154.3.100.94 0.0.0.0
+
+interface gigabitEthernet0/0
+ip access-group 1 out
+
+end
+copy running-config startup-config
